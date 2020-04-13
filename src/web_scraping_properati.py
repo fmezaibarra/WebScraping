@@ -32,6 +32,7 @@ from urllib.error import URLError
 from urllib.error import HTTPError
 from datetime import datetime, date, time, timedelta
 import calendar
+import time
 
 # Condiciona el acceso del Agente al Sitio de Properati
 import requests
@@ -188,7 +189,7 @@ while Num_Pagina <= 50:
             file.write(descripcion_conjunto+";"+tipo+";"+precio+";"+localizacion+";"+fecha_publicacion+";"+area+";"+num_habitaciones+";"+proy+"\n")
 
     Num_Pagina += 1
-    sleep(30)
+    time.sleep(30)
 
 #Cierra archivo Dataset despúes de escritura
 file.close()
